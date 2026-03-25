@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Geist', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wireframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  width: 574px;
+  height: 223px;
+  background-color: white;
+  border: 1px solid #e7e6e6;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* The foreground content */
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  /* Figma gap setting was 32px between items here */
+}
+
+/* Navigation items */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  /* Figmas internal gap was 7px */
+  cursor: pointer;
+  padding: 8px 4px;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  transition: transform 0.3s ease;
+}
+
+.nav-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.35s ease;
+  object-fit: contain;
+}
+
+.icon-hover {
+  opacity: 0;
+}
+
+.icon-default {
+  opacity: 1;
+}
+
+.nav-item p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3c3c3c;
+  letter-spacing: -0.24px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Popup interactions */
+.hover-popup {
+  position: absolute;
+  top: -59px;
+  /* Appears above */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px) scale(0.9);
+  width: 81px;
+  /* Increased by 4px */
+  height: 59px;
+  /* Increased by 4px */
+  background-color: #f8f8f8;
+  border-radius: 8.72px;
+  /* Increased radius based on request */
+  border: 2.81px solid rgba(0, 0, 0, 0.12);
+  /* Obvious but not too loud stroke opacity */
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.15), 0px 4px 8px rgba(0, 0, 0, 0.08);
+  /* More obvious shadow for depth */
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10;
+}
+
+.hover-popup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* State changes on hover */
+.content-row:hover .nav-item:not(:hover) {
+  opacity: 0.4;
+  /* Fade out siblings when hovering */
+}
+
+.content-row:hover .nav-item:not(:hover) .icon-wrapper {
+  transform: scale(0.95);
+  /* Slight scale down for non-hovered items */
+}
+
+.nav-item:hover .hover-popup {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.nav-item:hover p {
+  color: #000;
+}
+
+.nav-item:hover .icon-wrapper {
+  transform: scale(1.05);
+}
+
+.nav-item:hover .icon-default {
+  opacity: 0;
+}
+
+.nav-item:hover .icon-hover {
+  opacity: 1;
+}
