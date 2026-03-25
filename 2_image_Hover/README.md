@@ -1,4 +1,4 @@
-# Premium Image Hover Interaction ✨
+# Image Hover Interaction #1 
 
 Okay, so I built this image hover micro-interaction using html and CSS hover effect.
 
