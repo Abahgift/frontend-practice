@@ -9,3 +9,7 @@ A clean and dynamic image gallery built with HTML and CSS. The goal of this proj
 ### Technologies Used
 - HTML
 - Vanilla CSS 
+
+
+https://github.com/user-attachments/assets/13ada311-80dd-4639-a629-ae7b4bd4048c
+
