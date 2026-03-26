@@ -10,3 +10,7 @@ Also, all the other sibling options slightly dim out so the eyes can focus compl
 ### Tech Stack:
 - Vanilla **HTML** & **CSS**
 - The CSS interactions and animations are handled entirely via `transform`, `opacity`, `filter`, and custom bezier curves for optimal performance.
+
+
+https://github.com/user-attachments/assets/10f38c5e-aec4-4b7a-a991-c25a2c7a4d36
+
